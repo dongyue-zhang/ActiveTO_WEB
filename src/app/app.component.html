@@ -1,0 +1,13 @@
+@if (loading) {
+<mat-spinner style="margin: auto;"></mat-spinner>
+}
+@else {
+
+<app-navbar></app-navbar>
+<div class="main_container">
+    <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>
+}
+<ng-toast [width]="400" [position]="ToasterPosition"></ng-toast>

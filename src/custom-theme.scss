@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+
+$active-primary: mat.m2-define-palette(mat.$m2-indigo-palette);
+$active-accent: mat.m2-define-palette(mat.$m2-gray-palette, 700, 700, 700);
+
+
+$active-warn: mat.m2-define-palette(mat.$m2-red-palette);
+
+
+$active-theme: mat.m2-define-light-theme((color: (primary: $active-primary,
+        accent: $active-accent,
+        warn: $active-warn,
+      ),
+      typography: mat.m2-define-typography-config(),
+      density: 0));
+
+@include mat.all-component-themes($active-theme);
+
+:root {
+  --secodary-text-color: rgba(0, 0, 0, 0.54);
+  --primary-color: #FF7700;
+  --primary-color-contrast: #c0dbf3;
+  --primary-color-background: #E3F2FD;
+  --accent-color: #616161;
+  --accent-color-contrast: #EEEEEE;
+  --warn-color: #D50000;
+}
