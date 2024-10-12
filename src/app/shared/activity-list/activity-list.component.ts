@@ -243,7 +243,7 @@ export class ActivityListComponent implements OnInit, OnDestroy {
         } catch (error) { }
       }
 
-      if (this.activitiesOrigin == null) {
+      if (this.activitiesOrigin == null || this.activitiesOrigin.length == 0) {
         this.noMoreTimes = true;
       }
     });
