@@ -68,9 +68,8 @@ export class CategoryListComponent extends WithGridListItems implements OnInit, 
   }
 
   ngOnDestroy(): void {
-    this.categorySub.unsubscribe();
-    this.popularSub.unsubscribe();
-    this.paramMapSub.unsubscribe();
+    // this.popularSub.unsubscribe();
+    // this.paramMapSub.unsubscribe();
   }
 
   ngAfterViewInit(): void {

@@ -87,6 +87,7 @@ export class FacilityActivityListComponent extends WithGridListItems implements 
 
   ngAfterViewInit(): void {
     this.gridItems = this.viewChildren;
+    this.subscribeChanges();
     this.route.queryParams.subscribe(
       queryParams => {
         if (queryParams['category'] && !isNaN(+queryParams['typeId'])) {
@@ -97,7 +98,7 @@ export class FacilityActivityListComponent extends WithGridListItems implements 
       }
     )
 
-    this.subscribeChanges();
+
   }
 
 
